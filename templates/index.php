@@ -1,1 +1,6 @@
-<h1>Hello World!</h1>
+<section class="vh-100 container-xxl d-flex flex-column justify-content-center align-items-center">
+    <?php
+        // login form
+        require_once('partials/login.php');
+    ?>
+</section>

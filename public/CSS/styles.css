@@ -1,0 +1,14 @@
+* {
+    --purple: #3d1368;
+    --light-purple: #c94ce9;
+    --dark-blue: #031652;
+}
+
+/* Hero Image */
+.hero {
+    background-image: url(../../public/images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: bac;
+}

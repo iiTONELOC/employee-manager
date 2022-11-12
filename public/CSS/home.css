@@ -1,0 +1,38 @@
+/* Login Form Container */
+.login {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+}
+
+/* Login Form Button */
+.login-btn {
+    background-color: var(--purple);
+    border: none;
+    border-radius: 5px;
+    color: lightgrey;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.login-btn:hover {
+    background-color: var(--light-purple);
+    color: white;
+    scale: 1.05
+}
+
+.login input[type="text"], .login input[type="password"] {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--light-purple);
+    border-radius: 5px;
+    color: lightgrey;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+@media screen and (max-width: 300px) {
+    .login {
+        width: 80%;
+    }
+}
