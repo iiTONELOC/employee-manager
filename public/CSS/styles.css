@@ -4,6 +4,27 @@
     --dark-blue: #031652;
 }
 
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--purple) rgb(0, 0, 0);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    border-radius: 20px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
 .html {
     overflow: hidden;
 }

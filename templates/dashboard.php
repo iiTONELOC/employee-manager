@@ -2,11 +2,19 @@
     <div class="dash-wrapper">
         <div class="bg-dark sidebar">
             <?php
-                include 'templates/partials/navigation/side-navbar.php';
+                include_once 'templates/partials/navigation/side-navbar.php';
             ?>
         </div>
         <div class="dash-main">
-            <h1 class="text-center">Welcome to your dashboard</h1>
+
+            <section class="data-view">
+                <?php
+                    // Bring in the view loader
+                    include_once 'lib/utils/dashboard-main-view-loader.php';
+                ?>
+            </section>
+
+            <?php include_once 'templates/partials/menu-options/menu-options.php'; ?>
         </div>
     </div>
 </section>

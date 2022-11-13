@@ -25,9 +25,9 @@ function createLinks()
         $url = $link['url'];
         $icon = $link['icon'];
         $class = $link['class'];
-
-        $activeClass = $currentPage == $link['url'] ? 'active' : '';
-
+        
+        // need the basename of the url to compare to the current page
+        $activeClass = $currentPage == basename($link['url']) ? 'active' : '';
         $html = <<<HTML
         <span
             class="p-1 side-nav-link $activeClass"
