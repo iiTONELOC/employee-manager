@@ -17,3 +17,13 @@
     height: 100vh;
     overflow: hidden;
 }
+
+/* Custom styles for the top navbar */
+
+/* Header icons */
+
+.slash {
+    color: #984be5;
+    margin-left: -8px;
+    transform: rotate(100deg);
+}

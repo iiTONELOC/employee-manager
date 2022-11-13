@@ -1,10 +1,12 @@
 <section class="container-fluid dashboard p-0">
     <div class="dash-wrapper">
         <div class="bg-dark sidebar">
-            Sidebar
+            <?php
+                include 'templates/partials/navigation/side-navbar.php';
+            ?>
         </div>
         <div class="dash-main">
-            <h2 class="text-center">Welcome to your dashboard</h2>
+            <h1 class="text-center">Welcome to your dashboard</h1>
         </div>
     </div>
 </section>
