@@ -4,18 +4,16 @@
 class User
 {
     // Props
-
     private $id;
-    private $email;
     private $username;
     private $password;
     // Constructor
-    public function __construct($id, $email, $username, $password)
+
+    public function __construct($username, $password, $hash = true, $id=null)
     {
-        $this->id = $id;
-        $this->email = $email;
+        $id && $this->id = $id;
         $this->username = $username;
-        $this->password = $this->hashPassword($password);
+        $this->password = $hash ? $this->hashPassword($password) : $password;
     }
 
     // Methods
@@ -24,10 +22,11 @@ class User
         return $this->id;
     }
 
-    public function getEmail()
+    public function setId($id)
     {
-        return $this->email;
+        $this->id = $id;
     }
+
 
     public function getUsername()
     {
@@ -45,5 +44,10 @@ class User
         $options = ['cost' => $cost];
 
         return password_hash($password, PASSWORD_BCRYPT, $options);
+    }
+
+    public function getPassword()
+    {
+        return $this->password;
     }
 }

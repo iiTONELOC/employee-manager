@@ -31,6 +31,11 @@
     padding: 10px 20px;
 }
 
+.error {
+    color: red;
+    margin: 10px 0;
+}
+
 @media screen and (max-width: 300px) {
     .login {
         width: 80%;

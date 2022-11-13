@@ -1,12 +1,13 @@
 <?php
+   // start the session
+    session_start();
     // load the environment variables
-    require_once('lib/utils/load-env.php');
+    include_once('lib/utils/load-env.php');
+    // seed the database
+    include_once('lib/db/seeds.php');
+    // template header config
+    include_once('templates/template-config.php');
 ?>
-<?php
-    // manage variables for the templates
-    include 'templates/template-config.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,11 +18,6 @@
     <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <?php if ($CURRENT_PAGE == "Index") { ?>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-    <?php } ?>
     <link rel="stylesheet" href="public/CSS/styles.css" type="text/css">
     <?php
         // dynamically load the correct css file based on the current page
@@ -31,7 +27,7 @@
     <title><?php print $PAGE_TITLE;?></title>
 </head>
 
-<body class="container-fluid bg-black text-light hero">
+<body id="root" class="container-fluid bg-black text-light hero vh-100">
     <?php
         // use our template loader to load the correct template
         include_once 'lib/utils/template-loader.php';
@@ -43,5 +39,4 @@
     crossorigin="anonymous">
 </script>
 </body>
-
 </html>

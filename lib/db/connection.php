@@ -25,7 +25,7 @@
             return $conn;
         }
 
-        protected function closeConnection($conn)
+        public function closeConnection($conn)
         {
             $conn->close();
         }

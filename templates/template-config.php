@@ -1,5 +1,6 @@
 <?php
-    if ($_SERVER["SCRIPT_NAME"] == "/dashboard.php") {
+    $self = $_SERVER['REQUEST_URI'];
+    if ($self == "/dashboard.php") {
         $CURRENT_PAGE = "Dashboard";
         $PAGE_TITLE = "Dashboard";
     } else {

@@ -1,6 +1,6 @@
 <?php
 // import the connection.php file
-require_once 'lib/db/connection.php';
+include_once 'lib/db/connection.php';
 
 class DB extends Connection
     {
@@ -23,5 +23,10 @@ class DB extends Connection
         public function query($query)
         {
             return $this->conn->query($query);
+        }
+
+        public function close()
+        {
+            $this->closeConnection($this->conn);
         }
     }

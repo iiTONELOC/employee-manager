@@ -1,13 +1,16 @@
 <?php
-    $root = $_SERVER['DOCUMENT_ROOT'];
-    $templatePath = $root . '/templates';
+$root = $_SERVER['DOCUMENT_ROOT'];
+$templatePath = $root . '/templates';
 
-    // render the correct template based on the current page
+// render the correct template based on the current page
 
-    
-    if ($_SERVER["SCRIPT_NAME"] == "/dashboard.php") {
-        include $templatePath . 'dashboard.php';
-    } else {
-        include $templatePath . '/index.php';
-    }
+$self = $_SERVER['REQUEST_URI'];
+$session = $_COOKIE;
 
+if ($self == "/dashboard.php") {
+        isset($session['userId']) && include $templatePath . '/dashboard.php';
+        !isset($session['userId']) && header('Location: /index.php');
+} else {
+        !isset($session['userId']) && include $templatePath . '/index.php';
+        isset($session['userId']) && header('Location: /dashboard.php');
+}
