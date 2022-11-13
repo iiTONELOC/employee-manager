@@ -4,6 +4,10 @@
     --dark-blue: #031652;
 }
 
+.html {
+    overflow: hidden;
+}
+
 /* Hero Image */
 .hero {
     background-image: url(../../public/images/hero.png);
@@ -11,4 +15,5 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
+    overflow: hidden;
 }

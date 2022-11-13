@@ -4,7 +4,7 @@
 
     $dynamicSource;
 
-    if ($_SERVER["SCRIPT_NAME"]== "/dashboard.php") {
+    if ($_SERVER["REQUEST_URI"]== "/dashboard.php") {
         $dynamicSource = $cssFolder . '/dashboard.css';
     } else {
         $dynamicSource = $cssFolder . '/home.css';

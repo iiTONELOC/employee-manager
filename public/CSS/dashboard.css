@@ -1,0 +1,58 @@
+.dashboard {
+    height: 100%;
+}
+
+/* remove the image from hero container since we have occupied it */
+.hero {
+    background-image: none;
+}
+
+.dash-wrapper {
+    align-items: center;
+    background-image: url(../../public/images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    width: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    writing-mode: vertical-rl
+}
+
+.dash-main {
+    height: 100%;
+    width: calc(100% - 65px);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .dash-wrapper {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 65px
+    }
+
+    .dash-main {
+        width: 100%;
+        height: calc(100% - 65px);
+    }
+}

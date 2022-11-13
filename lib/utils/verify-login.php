@@ -66,6 +66,7 @@ function checkCredentials($username, $password)
 
     if ($verified) {
         $exp = time() + 60 * 60 * 24 * 30;
+        $_COOKIE['userId'] = $verified->getId();
         setcookie('userId', $verified->getId(), $exp, "/");
         return true;
     } else {
