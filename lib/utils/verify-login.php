@@ -65,7 +65,8 @@ function checkCredentials($username, $password)
     $verified = $uc->verifyLogin($username, $password);
 
     if ($verified) {
-        $exp = time() + 60 * 60 * 24 * 30;
+        // set expiration time to 1 day
+        $exp = time() + 60 * 60 * 24 ;
         $_COOKIE['userId'] = $verified->getId();
         setcookie('userId', $verified->getId(), $exp, "/");
         return true;

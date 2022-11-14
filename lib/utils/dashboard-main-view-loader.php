@@ -9,4 +9,3 @@ $dashAction = $_SESSION['dashAction'] ?? null;
 $dashAction && print($dashAction);
 
 !$dashAction && print('default');
-
