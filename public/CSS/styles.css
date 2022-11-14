@@ -27,6 +27,7 @@
 
 .html {
     overflow: hidden;
+    min-height: 400px;
 }
 
 /* Hero Image */
@@ -36,7 +37,7 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 /* Custom styles for the top navbar */
