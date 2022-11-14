@@ -8,10 +8,12 @@
         <div class="dash-main">
 
             <section class="data-view">
-                <?php
+                <div class="table-container">
+                    <?php
                     // Bring in the view loader
                     include_once 'lib/utils/dashboard-main-view-loader.php';
-                ?>
+                    ?>
+                </div>
             </section>
 
             <?php include_once 'templates/partials/menu-options/menu-options.php'; ?>

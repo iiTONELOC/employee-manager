@@ -21,6 +21,7 @@
     height: 100%;
     justify-content: center;
     width: 100%;
+    overflow: hidden;
 }
 
 
@@ -118,6 +119,11 @@
     filter: drop-shadow(0px 0px 3px #000);
 }
 
+.active-option {
+    background-color: rgb(91, 2, 91);
+    scale: 1.03;
+}
+
 .menu-option-card:hover {
     background-color: var(--purple);
     scale: 1.1;
@@ -125,12 +131,24 @@
 
 .data-view {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #000;
+    background-color: rgb(20, 22, 25);
     height: 100%;
     width: calc(100% - 250px);
+    overflow: auto;
+}
+
+.table-container {
+    width: 90%;
+    max-height: calc(100vh - 50px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px;
+    overflow: auto;
 }
 
 
@@ -150,6 +168,8 @@
     .dash-main {
         width: 100%;
         height: calc(100% - 65px);
+        overflow: hidden;
+
     }
 
     .side-nav {
