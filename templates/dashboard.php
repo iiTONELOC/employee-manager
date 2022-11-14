@@ -11,7 +11,7 @@
                 <div class="table-container">
                     <?php
                     // Bring in the view loader
-                    include_once 'lib/utils/dashboard-main-view-loader.php';
+                    include_once 'lib/helpers/dashboard-main-view-loader.php';
                     ?>
                 </div>
             </section>
@@ -20,3 +20,5 @@
         </div>
     </div>
 </section>
+
+<script src="public/js/autoToggle.js"></script>

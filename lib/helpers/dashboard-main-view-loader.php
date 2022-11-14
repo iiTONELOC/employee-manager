@@ -8,16 +8,22 @@ $dashAction = $_SESSION['dashAction'] ?? null;
 if ($dashAction) {
     switch ($dashAction) {
         case 'View All Departments':
-            include_once 'templates/partials/dash/viewAllDepartments.php';
+            include_once 'templates/partials/dash/departments/viewAllDepartments.php';
             break;
         case 'View All Roles':
-            include_once 'templates/partials/dash/viewAllRoles.php';
+            include_once 'templates/partials/dash/roles/viewAllRoles.php';
             break;
         case 'View All Employees':
-            include_once 'templates/partials/dash/viewAllEmployees.php';
+            include_once 'templates/partials/dash/employees/viewAllEmployees.php';
             break;
-        case 'Department Options':
-            echo 'Department Options';
+        case 'Add Department':
+            include_once 'templates/partials/dash/departments/addDepartment.php';
+            break;
+        case 'Update Department':
+            include_once 'templates/partials/dash/departments/updateDepartment.php';
+            break;
+        case 'Delete Department':
+            include_once 'templates/partials/dash/departments/deleteDepartment.php';
             break;
         case 'Role Options':
             echo 'Role Options';

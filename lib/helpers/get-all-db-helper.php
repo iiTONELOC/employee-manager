@@ -23,7 +23,7 @@ function getAllAndGenerate($tableName)
 {
     global $acceptableTableNames;
     if (in_array($tableName, $acceptableTableNames)) {
-        include_once 'lib/utils/table-generator.php';
+        include_once 'lib/helpers/table-generator.php';
         $tableData = getAll($tableName);
         // generate table headers from the role data
         $headerData = is_array($tableData) ? $tableData[0] : [];

@@ -4,9 +4,15 @@
     'View All Roles',
     'View All Employees',
 
-    'Department Options',
-    'Role Options',
-    'Employee Options',
+    'Add Department',
+    'Update Department',
+    'Delete Department',
+    'Add Role',
+    'Update Role',
+    'Delete Role',
+    'Add Employee',
+    'Update Employee',
+    'Delete Employee',
 
     'View Budgets',
     'Exit'
@@ -23,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $formatAction = ucwords(str_replace('_', ' ', $action));
 
     // check if the action is in the menu options array
-
+echo $action;
     if (in_array($formatAction, $menu_options)) {
         $_SESSION['dashAction'] = $formatAction;
         echo $formatAction;

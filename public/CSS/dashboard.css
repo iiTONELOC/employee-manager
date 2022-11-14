@@ -124,6 +124,11 @@
     scale: 1.03;
 }
 
+.active-option-drop {
+    background-color: rgb(166, 12, 166);
+    scale: 1.03;
+}
+
 .menu-option-card:hover {
     background-color: var(--purple);
     scale: 1.1;
