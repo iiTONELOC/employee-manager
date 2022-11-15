@@ -14,7 +14,9 @@ if ($self == "/dashboard.php") {
         include $root. '/lib/utils/logout.php';
 } elseif ($self == '/lib/helpers/menu-options-handler.php') {
         include $root. '/lib/helpers/menu-options-handler.php';
-}else {
+} elseif ($self == '/lib/utils/db-mutation-handler.php') {
+        include $root. '/lib/utils/db-mutation-handler.php';
+} else {
         !isset($session['userId']) && include $templatePath . '/index.php';
         isset($session['userId']) && header('Location: /dashboard.php');
 }

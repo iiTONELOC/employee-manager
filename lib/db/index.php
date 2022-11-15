@@ -5,7 +5,7 @@ include_once 'lib/db/connection.php';
 class DB extends Connection
     {
         // Props
-        private $conn;
+        public $conn;
 
         // Constructor
         public function __construct()

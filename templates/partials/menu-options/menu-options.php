@@ -21,21 +21,20 @@ $role_options = [
 
 $menu_options = array(
     'View All Departments',
-    'View All Roles',
-    'View All Employees',
-
     'Department Options'=>array(
         'Department Options',
         'Add Department',
         'Update Department',
         'Delete Department'
     ),
+    'View All Roles',
     'Role Options'=>array(
         'Role Options',
         'Add Role',
         'Update Role',
         'Delete Role'
     ),
+    'View All Employees',
     'Employee Options' => array(
         'Employee Options',
         'Add Employee',

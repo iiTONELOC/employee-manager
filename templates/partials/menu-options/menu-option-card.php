@@ -22,8 +22,8 @@ function createMenuOptionWDropDown($buttonLabel, $dopOptions)
     $tableName = str_replace(' Options', '', $buttonLabel);
     // see if the table name is in the dashAction
     // make sure that View All isn't in the dashAction
-    $isActive = strpos($dashAction, $tableName) !== false && strpos($dashAction, 'View All') === false ?
-     'active-option' : '';
+    $isActive = $dashAction ? strpos($dashAction, $tableName) !== false && strpos($dashAction, 'View All') === false ?
+     'active-option' : '' : '';
 
     $shouldExpand = $isActive !== '' ? 'toggleMe' : 'dontToggleMe';
 
